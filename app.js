@@ -19,6 +19,8 @@ let infoB = document.querySelector(".infoB")
 let contenedor = document.querySelector(".cartas")
 let vaciarCarrito = document.querySelector("#vaciarCarrito")
 let msjForm = document.querySelector("#msjForm")
+let btnComprar = document.querySelector(".btnComprar")
+let finalizarCompra = document.querySelector("#finalizarCompra")
 
 //funcion para buscar!
 
@@ -54,6 +56,8 @@ const filtrar = ()=>{
 btnB.addEventListener('click', filtrar)
 inputBuscar.addEventListener('keyup', filtrar)
 filtrar();
+
+// Pusheado de productos al carrito.
 
 stockProductos.forEach((autos) => {
     const { id, img, Modelo, Desc, Precio} = autos
@@ -118,6 +122,8 @@ function eliminarAuto (id) {
     mostrarCarrito()
 }
 
+// Guardar/Borrar datos del storage.
+
 function carritoAlStorage () {
     localStorage.setItem("carrito", JSON.stringify(carrito))
 } 
@@ -133,10 +139,8 @@ vaciarCarrito.addEventListener ("click", () => {
     mostrarCarrito();
 })
 
-
-
-
 //Formulario
+
 emailF.addEventListener("input", function () {
       console.log(emailF.value)  
 });
@@ -163,8 +167,6 @@ function Formulario ( email, nyp, modelo, precio ) {
     this.precio = precio;
 }
 
-
-
 //Proximo a agregar
 
 const lista = document.querySelector("#listado");
@@ -186,3 +188,14 @@ fetch("./data.json")
     });
   }); 
 
+//Continuar compra!
+
+btnComprar.addEventListener ('click', () => {
+    if(carrito.length === 0) {
+        finalizarCompra.innerHTML = `<p>Aun no agregaste nada al carrito</p>`
+
+    }
+    else {
+        finalizarCompra.innerHTML = `<p>En breve se va contactar un agente por chat</p>`
+    }
+})
