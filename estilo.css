@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.buscador {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.buscador div {
+    margin: 10px;
+}
+
+.cartas {
+    display: grid;    
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    width: min-content;
+    margin: auto;
+}
+
+.cartas div {
+    margin: 10px;
+
+}
+
+.cartas div img{
+    overflow: hidden;
+    width: 280px;
+    height: 170px;
+}
+
+footer {
+    margin: 20px 40%;
+}
+
+.agregar {
+    margin: 20px 30%;
+}
+
+.agregar div {
+    margin: 2px;
+}
+
+.contListado {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    padding: 5px;
+    justify-content: center;
+}

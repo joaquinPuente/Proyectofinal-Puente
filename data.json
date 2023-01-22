@@ -1,0 +1,5 @@
+[
+    {"id":5 , "modelo": "Toyota Etios", "precio":5400000},
+    {"id":6 , "modelo": "Fiat Siena", "precio": 1700000},
+    {"id":7 , "modelo": "Volswagen Fox", "precio": 3400000 }
+]
