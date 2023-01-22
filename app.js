@@ -175,7 +175,7 @@ fetch("./data.json")
       const div = document.createElement("div");
       div.innerHTML = `
       <div class="card m-3" style="width: 18rem;">
-      <img src="/img/proximamente.png" class="card-img-top">
+      <img src="./img/proximamente.png" class="card-img-top">
       <div class="card-body">
         <h5 class="card-title">${prod.modelo}</h5> 
         <p class="card-text">$${prod.precio}</p>             
